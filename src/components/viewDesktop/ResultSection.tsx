@@ -37,25 +37,25 @@ export default function ResultSection(props: ResultSectionProps) {
         width: '100%',
         maxWidth: '725px',
         height: '100%',
-        paddingTop: '92px',
+        paddingTop: '94px',
       }}
     >
-      <Stack direction="row" alignItems="center" mb="20px" position="relative">
+      <Stack direction="row" alignItems="center" mb="22px" position="relative">
         <Box
           sx={{
             marginRight: '15px',
             position: isAdjustArrowPos ? 'absolute' : 'relative',
-            left: isAdjustArrowPos ? '-40px' : '0',
+            left: isAdjustArrowPos ? '-42px' : '0',
             cursor: 'pointer',
           }}
           onClick={onGoBack}
         >
           <img src={arrowIcon} alt="arrow" width="26px" height="26px" />
         </Box>
-        <Title>Results</Title>
+        <Title sx={{ marginLeft: '4px' }}>Results</Title>
       </Stack>
-      <Box sx={{ flexGrow: 1, marginBottom: '39px' }}>
-        <Grid container spacing="34px" rowSpacing="31px" columns={12}>
+      <Box sx={{ flexGrow: 1, marginBottom: '30px' }}>
+        <Grid container spacing="34px" rowSpacing="29px" columns={12}>
           {isLoading
             ? Array.from(new Array(9)).map(() => (
               <Grid key={uuid()}>

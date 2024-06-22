@@ -23,6 +23,13 @@ const theme = createTheme({
           '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
             border: '3px solid #FF9B33',
           },
+          '& ::placeholder': {
+            fontFamily: 'Ubuntu',
+            fontSize: '14px',
+            fontWeight: 400,
+            lineHeight: '21px',
+            letterSpacing: '0.25px',
+          },
         },
         notchedOutline: {
           border: '3px solid #FFFFFF80',

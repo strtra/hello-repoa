@@ -9,7 +9,6 @@ const Title = styled('span')({
   fontWeight: 400,
   fontSize: '24px',
   lineHeight: '36px',
-  marginBottom: '16px',
 });
 
 const Count = styled('span')({
@@ -55,7 +54,7 @@ export default function MobileSearchSection(props: MobileSearchSectionProps) {
       }}
     >
       <Stack>
-        <Title>Search</Title>
+        <Title sx={{ marginBottom: '16px' }}>Search</Title>
         <Input
           sx={{ marginBottom: '28px' }}
           placeholder="keyword"
@@ -63,7 +62,7 @@ export default function MobileSearchSection(props: MobileSearchSectionProps) {
           onChange={(e) => onKeywordChange(e.target.value)}
           error={isKeywordError}
         />
-        <Title># Of Results Per Page</Title>
+        <Title sx={{ marginBottom: '8px' }}># Of Results Per Page</Title>
         <Stack direction="row" alignItems="baseline">
           <Count>{pageSize}</Count>
           <ResultSubtitle>results</ResultSubtitle>

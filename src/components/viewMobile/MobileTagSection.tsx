@@ -11,8 +11,7 @@ const Title = styled('span')({
   fontWeight: 400,
   fontSize: '24px',
   lineHeight: '36px',
-  marginTop: '20px',
-  marginBottom: '12px',
+  margin: '20px 0',
 });
 
 type MobileTagSectionProps = {

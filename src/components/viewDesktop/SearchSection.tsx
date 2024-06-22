@@ -9,7 +9,6 @@ const Title = styled('span')({
   fontSize: '24px',
   fontWeight: 400,
   lineHeight: '36px',
-  marginBottom: '20px',
 });
 
 const Count = styled('span')({
@@ -56,7 +55,7 @@ export default function SearchSection(props: SearchSectionProps) {
       justifyContent="space-between"
     >
       <Stack>
-        <Title>Search</Title>
+        <Title sx={{ marginBottom: '20px' }}>Search</Title>
         <Input
           placeholder="keyword"
           value={keyword}
@@ -64,7 +63,7 @@ export default function SearchSection(props: SearchSectionProps) {
           error={isKeywordError}
         />
         <Divider />
-        <Title># Of Results Per Page</Title>
+        <Title sx={{ marginBottom: '12px' }}># Of Results Per Page</Title>
         <Stack direction="row" alignItems="baseline">
           <Count>{pageSize}</Count>
           <ResultSubtitle>results</ResultSubtitle>
@@ -77,7 +76,7 @@ export default function SearchSection(props: SearchSectionProps) {
           variant="outlined"
           sx={{
             width: '343px',
-            marginBottom: '87px',
+            marginBottom: '14px',
           }}
           onClick={onSearch}
         >

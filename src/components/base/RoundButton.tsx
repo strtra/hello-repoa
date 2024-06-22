@@ -17,6 +17,10 @@ const theme = createTheme({
           padding: '8px 10px',
           width: 'fit-content',
           textTransform: 'none',
+          fontFamily: 'Bokor',
+          fontSize: '12px',
+          fontWeight: 400,
+          lineHeight: '12px',
 
           '&:hover': {
             border: '1px solid #FFFFFF',

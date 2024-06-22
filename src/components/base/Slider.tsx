@@ -37,6 +37,7 @@ const theme = createTheme({
           lineHeight: '24px',
           letterSpacing: '0.15px',
           textAlign: 'left',
+          paddingTop: '4px',
         },
         thumb: {
           '&:hover, &.Mui-focusVisible': {

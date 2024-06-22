@@ -9,19 +9,13 @@ import {
   Tab,
 } from '@mui/material';
 import TabContext from '@mui/lab/TabContext';
-import MuiTabList from '@mui/lab/TabList';
+import TabList from '@mui/lab/TabList';
 import MuiTabPanel from '@mui/lab/TabPanel';
 import baseTheme from '../../theme/baseTheme';
 import FollowerCard from './FollowerCard';
 import FollowerSkeletonCard from './FollowerSkeletonCard';
 import { getFollowers, getFollowings } from '../../actions/fetchActions';
 import { FollowerTab, Follower } from '../../domain/Follower';
-
-const TabList = styled(MuiTabList)({
-  '& .MuiTabs-indicator': {
-    background: '#FFFFFF',
-  },
-});
 
 const TabPanel = styled(MuiTabPanel)({
   padding: '32px 16px',
@@ -43,6 +37,21 @@ const theme = createTheme({
           '&.Mui-selected': {
             color: '#FFFFFF',
           },
+        },
+      },
+    },
+    MuiTabs: {
+      styleOverrides: {
+        root: {
+          height: '33px',
+          minHeight: '33px',
+
+          '& .MuiButtonBase-root': {
+            padding: '0px 16px 20px',
+          },
+        },
+        indicator: {
+          background: '#FFFFFF',
         },
       },
     },
@@ -146,6 +155,7 @@ export default function FollowerSection() {
                 position: 'fixed',
                 width: '375px',
                 zIndex: 10,
+                paddingTop: '32px',
               }}
             >
               <TabList onChange={onTabChange} variant="fullWidth" centered>
@@ -154,7 +164,7 @@ export default function FollowerSection() {
               </TabList>
             </Box>
 
-            <Box mt="48px">
+            <Box mt="64px">
               <TabPanel value={FollowerTab.Followers}>
                 <Stack spacing="16px">
                   {isLoading

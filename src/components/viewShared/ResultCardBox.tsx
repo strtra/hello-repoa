@@ -64,7 +64,7 @@ export default function ResultCardBox(props: ResultCardProps) {
           image={getFakeImage()}
           alt="result"
         />
-        <CardContent sx={{ padding: '12px 0' }}>
+        <CardContent sx={{ padding: isDesktopView ? '12px 0' : '16px 0' }}>
           <Title>{name}</Title>
           <Subtitle>{username}</Subtitle>
         </CardContent>

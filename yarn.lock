@@ -1446,6 +1446,11 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.2.tgz#d8bae93ac8b815b2bd7a98078cf91e2724ef11e5"
   integrity sha512-J4yDIIthosAsRZ5CPYP/jQvUAQtlZTTD/4suA08/FEnlxqW3sKS9iAhgsa9VYLZ6vDHn/ixJgIqRQPotoBjxIw==
 
+"@fontsource/bokor@^5.0.13":
+  version "5.0.13"
+  resolved "https://registry.yarnpkg.com/@fontsource/bokor/-/bokor-5.0.13.tgz#e35f45b552ab01fff8d3244788cfc3c4415c3e79"
+  integrity sha512-HFPLmQ/Okp5BGgeedxIBR15nbHoO9SFGJNnw+98TopCrC3FZZadgaQEZmeRBcL5i55SKTzUWOhW+ovZTvO3VEQ==
+
 "@fontsource/ubuntu@^5.0.13":
   version "5.0.13"
   resolved "https://registry.yarnpkg.com/@fontsource/ubuntu/-/ubuntu-5.0.13.tgz#1521b3ada4afe82358fbc1f3ab975a7fa5a0864d"
