@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off"
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  }
+}
