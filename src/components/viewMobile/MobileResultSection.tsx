@@ -57,18 +57,16 @@ export default function MobileResultSection(props: MobileResultSectionProps) {
             </Grid>
           ))}
       </Stack>
-      {!isLoading && !isLoadingMore && (
-        <Button
-          variant="outlined"
-          sx={{
-            width: '343px',
-            marginBottom: '86px',
-          }}
-          onClick={onLoadMore}
-        >
-          MORE
-        </Button>
-      )}
+      <Button
+        variant="outlined"
+        sx={{
+          width: '343px',
+          marginBottom: '86px',
+        }}
+        onClick={onLoadMore}
+      >
+        MORE
+      </Button>
     </Stack>
   );
 }

@@ -75,18 +75,16 @@ export default function ResultSection(props: ResultSectionProps) {
             ))}
         </Grid>
       </Box>
-      {!isLoading && !isLoadingMore && (
-        <Button
-          variant="outlined"
-          sx={{
-            width: '343px',
-            marginBottom: '20px',
-          }}
-          onClick={onLoadMore}
-        >
-          MORE
-        </Button>
-      )}
+      <Button
+        variant="outlined"
+        sx={{
+          width: '343px',
+          marginBottom: '20px',
+        }}
+        onClick={onLoadMore}
+      >
+        MORE
+      </Button>
     </Stack>
   );
 }

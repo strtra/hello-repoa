@@ -6,10 +6,10 @@ import { Tag } from '../domain/Tag';
 export const getFollowers = (currentPage: number) => {
   const total = 100;
   const defaultPageSize = 20;
-  const tatalPages = Math.ceil(total / defaultPageSize);
+  const totalPages = Math.ceil(total / defaultPageSize);
   let curPage = currentPage;
   // reset page number to 1 to generate infinite data
-  if (curPage > tatalPages) {
+  if (curPage > totalPages) {
     curPage = 1;
   }
 
@@ -23,10 +23,10 @@ export const getFollowers = (currentPage: number) => {
 export const getFollowings = (currentPage: number) => {
   const total = 48;
   const defaultPageSize = 20;
-  const tatalPages = Math.ceil(total / defaultPageSize);
+  const totalPages = Math.ceil(total / defaultPageSize);
   let curPage = currentPage;
   // reset page number to 1 to generate infinite data
-  if (curPage > tatalPages) {
+  if (curPage > totalPages) {
     curPage = 1;
   }
 
@@ -45,10 +45,10 @@ export const searchResultCards = (
 ) => {
   let curPage = currentPage;
   if (currentTotal) {
-    const tatalPages = Math.ceil(currentTotal / pageSize);
+    const totalPages = Math.ceil(currentTotal / pageSize);
 
     // reset page number to 1 to generate infinite data
-    if (curPage > tatalPages) {
+    if (curPage > totalPages) {
       curPage = 1;
     }
   }

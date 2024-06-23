@@ -16,9 +16,10 @@ import FollowerCard from './FollowerCard';
 import FollowerSkeletonCard from './FollowerSkeletonCard';
 import { getFollowers, getFollowings } from '../../actions/fetchActions';
 import { FollowerTab, Follower } from '../../domain/Follower';
+import throttledEffect from '../../hooks/throttledEffect';
 
 const TabPanel = styled(MuiTabPanel)({
-  padding: '32px 16px',
+  padding: '33px 16px',
 });
 
 const theme = createTheme({
@@ -82,9 +83,11 @@ export default function FollowerSection() {
       scrollRef.current.addEventListener('scroll', () => {
         const { clientHeight, scrollTop, scrollHeight } = scrollRef.current;
 
-        // deteck scrolled to bottom
-        if (scrollTop + clientHeight >= scrollHeight) {
-          setIsLoadingMore(true);
+        // detect scrolled to bottom
+        if (scrollTop + clientHeight >= scrollHeight * 0.85) {
+          throttledEffect(() => {
+            setIsLoadingMore(true);
+          }, 1000);
         }
       });
     }

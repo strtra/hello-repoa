@@ -1,7 +1,7 @@
 import { ListWithPage } from './Pagination';
 
 export enum FollowerTab {
-  Followers = 'FOLOWERS',
+  Followers = 'FOLLOWERS',
   Following = 'FOLLOWING',
 }
 

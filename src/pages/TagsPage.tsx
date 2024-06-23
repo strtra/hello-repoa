@@ -8,11 +8,12 @@ import { getTags } from '../actions/fetchActions';
 import { Tag } from '../domain/Tag';
 import Header from '../components/viewMobile/Header';
 import AppPaths from '../AppRoutes';
+import debouncedEffect from '../hooks/debouncedEffect';
 
 export default function TagsPage() {
   const [tags, setTags] = useState<Tag[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isLoadingMore, setisLoadingMore] = useState(false);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
   const isMobileView = useMediaQuery(theme.breakpoints.down('mobile'));
   const navigate = useNavigate();
 
@@ -23,13 +24,13 @@ export default function TagsPage() {
     });
   }, []);
 
-  const onLoadMore = () => {
-    setisLoadingMore(true);
+  const onLoadMore = debouncedEffect(() => {
+    setIsLoadingMore(true);
     getTags().then((result) => {
       setTags([...tags, ...result]);
-      setisLoadingMore(false);
+      setIsLoadingMore(false);
     });
-  };
+  }, 1000);
 
   const onGoBack = () => navigate(AppPaths.HOME);
 

@@ -56,19 +56,17 @@ export default function MobileTagSection(props: MobileTagSectionProps) {
             ))}
         </Grid>
       </Box>
-      {!isLoading && !isLoadingMore && (
-        <Stack alignItems="center" padding="20px 0px">
-          <Button
-            variant="outlined"
-            sx={{
-              width: '343px',
-            }}
-            onClick={onLoadMore}
-          >
-            MORE
-          </Button>
-        </Stack>
-      )}
+      <Stack alignItems="center" padding="20px 0px">
+        <Button
+          variant="outlined"
+          sx={{
+            width: '343px',
+          }}
+          onClick={onLoadMore}
+        >
+          MORE
+        </Button>
+      </Stack>
     </Stack>
   );
 }

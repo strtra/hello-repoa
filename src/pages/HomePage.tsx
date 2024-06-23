@@ -8,6 +8,7 @@ import { searchResultCards } from '../actions/fetchActions';
 import { ResultCard } from '../domain/ResultCard';
 import Header from '../components/viewMobile/Header';
 import MobileNavBar from '../components/viewMobile/MobileNavBar';
+import debouncedEffect from '../hooks/debouncedEffect';
 
 enum PageView {
   Search,
@@ -23,7 +24,7 @@ export default function HomePage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentTotal, setCurrentTotal] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-  const [isLoadingMore, setisLoadingMore] = useState(false);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
   const isMobileView = useMediaQuery(theme.breakpoints.down('mobile'));
   const isExpandView = useMediaQuery(theme.breakpoints.up('desktop'));
 
@@ -67,17 +68,17 @@ export default function HomePage() {
     );
   };
 
-  const onLoadMore = () => {
-    setisLoadingMore(true);
+  const onLoadMore = debouncedEffect(() => {
+    setIsLoadingMore(true);
     searchResultCards(keyword, pageSize, currentPage, currentTotal).then(
       (result) => {
         const { data, page } = result;
         setCards([...cards, ...data]);
         setCurrentPage(page + 1);
-        setisLoadingMore(false);
+        setIsLoadingMore(false);
       }
     );
-  };
+  }, 1000);
 
   const onGoBack = () => {
     setView(PageView.Search);

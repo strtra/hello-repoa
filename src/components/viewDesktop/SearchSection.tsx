@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled, Stack, Box } from '@mui/material';
+import { styled, Stack } from '@mui/material';
 import Input from '../base/Input';
 import Divider from '../base/Divider';
 import Slider from '../base/Slider';
@@ -52,7 +52,7 @@ export default function SearchSection(props: SearchSectionProps) {
         height: 'calc(100vh - 54px)',
         paddingTop: '54px',
       }}
-      justifyContent="space-between"
+      // justifyContent="space-between"
     >
       <Stack>
         <Title sx={{ marginBottom: '20px' }}>Search</Title>
@@ -71,7 +71,10 @@ export default function SearchSection(props: SearchSectionProps) {
         <Slider onChange={onSliderChange} />
         <Divider />
       </Stack>
-      <Box>
+      <Stack
+        sx={{ height: '100%', maxHeight: '359px' }}
+        justifyContent="flex-end"
+      >
         <Button
           variant="outlined"
           sx={{
@@ -82,7 +85,7 @@ export default function SearchSection(props: SearchSectionProps) {
         >
           Search
         </Button>
-      </Box>
+      </Stack>
     </Stack>
   );
 }
