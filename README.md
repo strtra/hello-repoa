@@ -1,4 +1,33 @@
-# Getting Started with Create React App
+# :golf: Demo
+
+## :bookmark: Menu
+
+### Under `src` folder
+
+- actions
+  - :pizza: Provide all API fetch actions and define the basic fetch method.
+
+- assets
+  - :fries: Store all media the app is compiled, like images.
+
+- components
+  - :meat_on_bone: Place all components the app needs and categorize them.
+
+- domain
+  - :curry: Define all Types the app is compiled.
+
+- hooks
+  - :rice_ball: Define shared functions the app needs.
+
+- pages
+  - :cookie: Define all pages that composite components.
+
+- theme
+  - :doughnut: Define the global theme, such as breakpoint, and font.
+
+## :ramen: How to use?
+
+Getting Started with Create React App.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
